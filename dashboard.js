@@ -33,6 +33,27 @@ router.get("/cards", async (req, res, next) => {
   });
 
 
+/* Get /sets - retrieve all unique  card set */
+router.get("/sets", async (req, res, next) => {
+    try {
+      const cards = await readCards();
+  
+      // extract unique sets
+      const sets = [...new Set(
+        cards
+          .map(card => card.set)
+          .filter(set => set && set.trim() !== "")
+      )];
+  
+      res.json({
+        successMessage: "Sets retrieved successfully",
+        sets
+      });
+    } catch (err) {
+      next(err);
+    }
+  });
+
 /*   create card (protected) */
 router.post("/cards/create", authenticateToken, async (req, res, next) => {
     try {
