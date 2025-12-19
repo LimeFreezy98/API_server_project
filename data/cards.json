@@ -7,6 +7,32 @@
     "set": "",
     "attack": 0,
     "defense": 0
+  },
+  {
+    "cardId": "card1",
+    "name": "Fire Dragon",
+    "power": 9000,
+    "type": "dragon",
+    "set": "medeival_fantansy",
+    "rarity": "rare"
+    
+  },
+  {
+    "cardId": "card2",
+    "name": "clockwork knight",
+    "power": 500,
+    "type": "clockwork",
+    "set": "clockwork",
+    "rarity":"common"
+
+  },
+  {
+    "cardId": "card3",
+    "name": "clockwork dragon",
+    "power": 7000,
+    "type": "clockwork",
+    "set": "clockwork",
+    "rarity": "legendary"
+    
   }
-  
 ]
